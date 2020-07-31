@@ -1,4 +1,4 @@
-package com.example.dagger2demo;
+package com.example.dagger2demo.car;
 
 import android.util.Log;
 
@@ -14,6 +14,5 @@ public class Remote {
 
     public void setListener(Car car) {
         Log.d(TAG, "setListener: remote");
-        car.drive();
     }
 }

@@ -1,4 +1,4 @@
-package com.example.dagger2demo;
+package com.example.dagger2demo.car;
 
 import android.util.Log;
 
