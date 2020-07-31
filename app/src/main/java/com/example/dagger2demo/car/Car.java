@@ -29,7 +29,7 @@ public class Car {
     }
     
     public void drive() {
-        Log.d(TAG, driver + "drive: " + this);
+        Log.d(TAG, driver + "drive: " + driver.name + " " + this);
         engine.start();
     }
 }

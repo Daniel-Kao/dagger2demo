@@ -20,10 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ActivityComponent component = ((ExampleApp) getApplication()).getAppComponent()
-                .getActivityComponentBuilder()
-                .horsePower(100)
-                .engineCapacity(123130)
-                .build();
+                .getActivityComponentFactory().create(100, 10000);
 
         component.inject(this);
 

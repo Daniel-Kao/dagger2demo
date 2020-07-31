@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.example.dagger2demo.dagger.AppComponent;
 import com.example.dagger2demo.dagger.DaggerAppComponent;
+import com.example.dagger2demo.dagger.DriverModule;
 
 public class ExampleApp extends Application {
 
@@ -13,7 +14,7 @@ public class ExampleApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-        component = DaggerAppComponent.create();
+        component = DaggerAppComponent.factory().create(new DriverModule("daniel"));
     }
 
     public AppComponent getAppComponent() {
