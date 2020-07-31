@@ -10,12 +10,14 @@ public class Car {
 
     private Wheels wheels;
     private Engine engine;
+    private Driver driver;
 
 
     @Inject
-    public Car(Wheels wheels, Engine engine) {
+    public Car(Wheels wheels, Engine engine, Driver driver) {
         this.wheels = wheels;
         this.engine = engine;
+        this.driver = driver;
     }
 
     @Inject
@@ -24,7 +26,7 @@ public class Car {
     }
     
     public void drive() {
-        Log.d(TAG, "drive: ");
+        Log.d(TAG, driver + "drive: " + this);
         engine.start();
     }
 }
